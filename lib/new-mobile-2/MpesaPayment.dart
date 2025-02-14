@@ -564,7 +564,7 @@ class _MpesaPaymentState extends State<MpesaPayment> {
                         top: 387 * fem,
                         child: SizedBox(
                           width: 385 * fem,
-                          height: 307 * fem,
+                      //    height: 307 * fem,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
@@ -605,7 +605,7 @@ class _MpesaPaymentState extends State<MpesaPayment> {
                                                 margin: EdgeInsets.fromLTRB(
                                                     0 * fem,
                                                     0 * fem,
-                                                    12 * fem,
+                                                    0 * fem,
                                                     0 * fem),
                                                 width: 40 * fem,
                                                 height: 40 * fem,

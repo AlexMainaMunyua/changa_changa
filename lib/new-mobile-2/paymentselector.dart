@@ -659,92 +659,58 @@ class _PaymentSelectorState extends State<PaymentSelector> {
                                 height: 19 * fem,
                               ),
                               TextButton(
-                                // frame51XWZ (3031:8532)
                                 onPressed: () {
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(
                                       builder: (context) => CardPayment(
-                                          channelData: widget.channelData,
-                                          accessT: widget.accessToken,
-                                          amount: widget.amount),
+                                        channelData: widget.channelData,
+                                        accessT: widget.accessToken,
+                                        amount: widget.amount,
+                                      ),
                                     ),
                                   );
                                 },
                                 style: TextButton.styleFrom(
                                   padding: EdgeInsets.zero,
                                 ),
-                                child: SizedBox(
-                                  width: 165 * fem,
-                                  height: 40 * fem,
-                                  child: SizedBox(
-                                    // group1171274815GU9 (3031:8534)
-                                    width: double.infinity,
-                                    height: double.infinity,
-                                    child: Row(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.center,
-                                      children: [
-                                        Container(
-                                          // autogroup9mhbD8V (B8pN1VoUvZ3NBjLzra9Mhb)
-                                          margin: EdgeInsets.fromLTRB(0 * fem,
-                                              0 * fem, 12 * fem, 0 * fem),
-                                          width: 40 * fem,
-                                          height: double.infinity,
-                                          child: Stack(
-                                            children: [
-                                              Positioned(
-                                                // group1171274818xVP (3031:8538)
-                                                left: 0 * fem,
-                                                top: 0 * fem,
-                                                child: Container(
-                                                  padding: EdgeInsets.fromLTRB(
-                                                      2.29 * fem,
-                                                      10.29 * fem,
-                                                      3.34 * fem,
-                                                      10.29 * fem),
-                                                  width: 40 * fem,
-                                                  height: 40 * fem,
-                                                  decoration: BoxDecoration(
-                                                    color:
-                                                        const Color(0xfff3f3f3),
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            20 * fem),
-                                                  ),
-                                                  child: Center(
-                                                    // pesalink1TS9 (3031:8540)
-                                                    child: SizedBox(
-                                                      width: 34.37 * fem,
-                                                      height: 19.43 * fem,
-                                                      child: Image.asset(
-                                                        'assets/new-mobile-2/images/pesalink-1.png',
-                                                        fit: BoxFit.contain,
-                                                      ),
-                                                    ),
-                                                  ),
-                                                ),
-                                              ),
-                                            ],
+                                child: Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    Container(
+                                      margin: EdgeInsets.fromLTRB(0 * fem, 0 * fem, 12 * fem, 0 * fem),
+                                      width: 40 * fem,
+                                      height: 40 * fem,
+                                      decoration: BoxDecoration(
+                                        color: const Color(0xfff3f3f3),
+                                        borderRadius: BorderRadius.circular(20 * fem),
+                                      ),
+                                      child: Center(
+                                        child: SizedBox(
+                                          width: 34.37 * fem,
+                                          height: 19.43 * fem,
+                                          child: Image.asset(
+                                            'assets/new-mobile-2/images/pesalink-1.png',
+                                            fit: BoxFit.contain,
                                           ),
                                         ),
-                                        Text(
-                                          // visamastercardzgy (3031:8541)
-                                          'Visa / Mastercard',
-                                          style: SafeGoogleFont(
-                                            'Inter',
-                                            fontSize: 14 * ffem,
-                                            fontWeight: FontWeight.w500,
-                                            height: 0.9283593042 * ffem / fem,
-                                            letterSpacing: -0.2800000334 * fem,
-                                            color: const Color(0xff1f1f1f),
-                                          ),
-                                        ),
-                                      ],
+                                      ),
                                     ),
-                                  ),
+                                    Text(
+                                      'Visa / Mastercard',
+                                      style: SafeGoogleFont(
+                                        'Inter',
+                                        fontSize: 14 * ffem,
+                                        fontWeight: FontWeight.w500,
+                                        height: 0.928 * ffem / fem,
+                                        letterSpacing: -0.28 * fem,
+                                        color: const Color(0xff1f1f1f),
+                                      ),
+                                    ),
+                                  ],
                                 ),
                               ),
+
                             ],
                           ),
                         ),

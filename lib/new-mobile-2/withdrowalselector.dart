@@ -318,7 +318,7 @@ class _WithdrawalsState extends State<Withdrawals> {
                                                     margin: EdgeInsets.fromLTRB(
                                                         0 * fem,
                                                         0 * fem,
-                                                        67.93 * fem,
+                                                        47.93 * fem,
                                                         0 * fem),
                                                     child: Text(
                                                       'Campaign Withdrawal',
@@ -462,7 +462,7 @@ class _WithdrawalsState extends State<Withdrawals> {
                         top: 395 * fem,
                         child: SizedBox(
                           width: 384 * fem,
-                          height: 340 * fem,
+                       //   height: 340 * fem,
                           child: Form(
                             key: _formKey,
                             child: Column(
@@ -749,9 +749,6 @@ class _WithdrawalsState extends State<Withdrawals> {
                                     ],
                                   ),
                                 ),
-                                SizedBox(
-                                  height: 18 * fem,
-                                ),
                                 TextButton(
                                   // buttonRVT (2935:10624)
                                   onPressed: () async {
@@ -845,7 +842,7 @@ class _WithdrawalsState extends State<Withdrawals> {
                                   ),
                                   child: Container(
                                     width: double.infinity,
-                                    height: 48 * fem,
+                                    height: 50 * fem,
                                     decoration: BoxDecoration(
                                       color: const Color(0xff71ae00),
                                       borderRadius:
