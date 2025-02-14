@@ -1,0 +1,381 @@
+name: changa_changa
+description: financial revolution in your hands
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number is used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+# In Windows, build-name is used as the major, minor, and patch parts
+# of the product and file versions while build-number is used as the build suffix.
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.3
+
+# Dependencies specify other packages that your package needs in order to work.
+# To automatically upgrade your package dependencies to the latest versions
+# consider running `flutter pub upgrade --major-versions`. Alternatively,
+# dependencies can be manually updated by changing the version numbers below to
+# the latest version available on pub.dev. To see which dependencies have newer
+# versions available, run `flutter pub outdated`.
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.2
+  flutter_secure_storage: ^9.2.4
+  http: ^1.3.0
+  jwt_decoder: ^2.0.1
+  fluttertoast: ^8.2.1
+  flutter_dotenv: ^5.0.2
+  provider: ^6.0.5
+  loading_animation_widget: ^1.2.0+4
+  flutter_launcher_icons: ^0.14.3
+  quiver: ^3.2.1
+  intl: ^0.19.0
+  flutter_keyboard_visibility: ^6.0.0
+  percent_indicator: ^4.2.3
+  dropdown_button2: ^2.1.4
+  lottie: ^3.2.0
+  awesome_snackbar_content: ^0.1.1
+  flutter_speed_dial: ^7.0.0
+  quickalert: ^1.0.1
+  timer_button: ^2.0.0
+  timer_count_down: ^2.2.2
+  pin_code_fields: ^8.0.1
+  sms_autofill: ^2.4.1
+
+
+  google_fonts: ^6.2.1
+  shared_preferences: ^2.5.2
+  camera: ^0.11.0+2
+  image_picker: ^1.1.2
+  argon_buttons_flutter_fix: ^1.1.3
+
+
+    # root: ^2.0.4
+#    uni_links: ^0.5.1
+
+
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/app_logo.png"
+
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^5.0.0
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter packages.
+flutter:
+
+
+  uses-material-design: true
+
+  assets:
+    - animations/
+    - .env
+    - assets/user.png
+    - assets/new-mobile-2/images/group-1171275003-MP7.png
+    - assets/new-mobile-2/images/pesalink-1.png
+    - assets/new-mobile-2/images/ellipse-52-bg.png
+    - assets/user-516-a/images/illustration.png
+    - assets/new-mobile-2/images/top-status-bar.png
+    - assets/new-mobile-2/images/group-93-dLV.png
+    - assets/new-mobile-2/images/top-status-bar-Kus.png
+    - assets/new-mobile-2/images/vector-mhK.png
+    - assets/new-mobile-2/images/vector-2RF.png
+    - assets/new-mobile-2/images/top-status-bar-shj.png
+    - assets/new-mobile-2/images/vector-ZUV.png
+    - assets/new-mobile-2/images/nav-bar.png
+    - assets/new-mobile-2/images/group-1171274921.png
+    - assets/new-mobile-2/images/vector-qCV.png
+    - assets/new-mobile-2/images/vector-dxD.png
+    - assets/new-mobile-2/images/top-status-bar-x5w.png
+    - assets/new-mobile-2/images/auto-group-hlmf.png
+    - assets/new-mobile-2/images/top-status-bar-dpD.png
+    - assets/new-mobile-2/images/vector-BYM.png
+    - assets/new-mobile-2/images/vector-W7K.png
+    - assets/new-mobile-2/images/auto-group-u433.png
+    - assets/new-mobile-2/images/nav-bar-teu.png
+    - assets/new-mobile-2/images/vector-ygM.png
+    - assets/new-mobile-2/images/auto-group-z93o.png
+    - assets/new-mobile-2/images/auto-group-p77o.png
+    - assets/new-mobile-2/images/auto-group-4c4z.png
+    - assets/new-mobile-2/images/vector-497.png
+    - assets/new-mobile-2/images/group.png
+    - assets/new-mobile-2/images/vector-43s.png
+    - assets/new-mobile-2/images/vector-3zZ.png
+    - assets/new-mobile-2/images/group-93-rwB.png
+    - assets/new-mobile-2/images/vector-ByT.png
+    - assets/new-mobile-2/images/vector-4TT.png
+    - assets/new-mobile-2/images/group-tPb.png
+    - assets/new-mobile-2/images/vector-GXs.png
+    - assets/new-mobile-2/images/vector-gdX.png
+    - assets/new-mobile-2/images/vector-Uiu.png
+    - assets/new-mobile-2/images/angle-right.png
+    - assets/new-mobile-2/images/vector-c33.png
+    - assets/new-mobile-2/images/top-status-bar-SYH.png
+    - assets/new-mobile-2/images/vector-fTo.png
+    - assets/new-mobile-2/images/group-1171274790.png
+    - assets/new-mobile-2/images/vector-CA5.png
+    - assets/new-mobile-2/images/vector-YUq.png
+    - assets/new-mobile-2/images/vector-1rH.png
+    - assets/new-mobile-2/images/vector-YYy.png
+    - assets/new-mobile-2/images/auto-group-oby5.png
+    - assets/new-mobile-2/images/vector-hfo.png
+    - assets/new-mobile-2/images/auto-group-bygv.png
+    - assets/new-mobile-2/images/vector-CsT.png
+    - assets/new-mobile-2/images/auto-group-2qg5.png
+    - assets/new-mobile-2/images/vector-voT.png
+    - assets/new-mobile-2/images/auto-group-btgh.png
+    - assets/new-mobile-2/images/auto-group-5ptw.png
+    - assets/new-mobile-2/images/auto-group-l9t7.png
+    - assets/new-mobile-2/images/vector-Ktu.png
+    - assets/new-mobile-2/images/vector-FMB.png
+    - assets/new-mobile-2/images/vector-NQy.png
+    - assets/new-mobile-2/images/vector-etq.png
+    - assets/new-mobile-2/images/vector-nCy.png
+    - assets/new-mobile-2/images/vector-bL5.png
+    - assets/new-mobile-2/images/top-status-bar-Wt1.png
+    - assets/new-mobile-2/images/auto-group-ueb3.png
+    - assets/new-mobile-2/images/vector-LNu.png
+    - assets/new-mobile-2/images/vector-H8m.png
+    - assets/new-mobile-2/images/vector-TXf.png
+    - assets/new-mobile-2/images/vector-Luw.png
+    - assets/new-mobile-2/images/auto-group-wkbo.png
+    - assets/new-mobile-2/images/vector-JZF.png
+    - assets/new-mobile-2/images/vector-xRf.png
+    - assets/new-mobile-2/images/auto-group-51qk.png
+    - assets/new-mobile-2/images/vector-J6V.png
+    - assets/new-mobile-2/images/vector-huj.png
+    - assets/new-mobile-2/images/vector-Trh.png
+    - assets/new-mobile-2/images/vector-7J9.png
+    - assets/new-mobile-2/images/auto-group-trxr.png
+    - assets/new-mobile-2/images/vector-syj.png
+    - assets/new-mobile-2/images/vector-mEq.png
+    - assets/new-mobile-2/images/angle-right-PbX.png
+    - assets/new-mobile-2/images/vector-kBK.png
+    - assets/new-mobile-2/images/top-status-bar-g73.png
+    - assets/new-mobile-2/images/vector-4D7.png
+    - assets/new-mobile-2/images/group-gNV.png
+    - assets/new-mobile-2/images/auto-group-xuny.png
+    - assets/new-mobile-2/images/auto-group-5aed.png
+    - assets/new-mobile-2/images/vector-EoK.png
+    - assets/new-mobile-2/images/angle-right-Kyb.png
+    - assets/new-mobile-2/images/auto-group-derf.png
+    - assets/new-mobile-2/images/vector-naV.png
+    - assets/new-mobile-2/images/vector-Rvh.png
+    - assets/new-mobile-2/images/top-status-bar-Tqj.png
+    - assets/new-mobile-2/images/vector-XZB.png
+    - assets/new-mobile-2/images/top-status-bar-54M.png
+    - assets/new-mobile-2/images/vector-oFF.png
+    - assets/new-mobile-2/images/vector-WnD.png
+    - assets/new-mobile-2/images/vector-qtm.png
+    - assets/new-mobile-2/images/vector-jpD.png
+    - assets/new-mobile-2/images/vector-iyf.png
+    - assets/new-mobile-2/images/vector-kjK.png
+    - assets/new-mobile-2/images/vector-fMb.png
+    - assets/new-mobile-2/images/auto-group-tcmo.png
+    - assets/new-mobile-2/images/vector-ce5.png
+    - assets/new-mobile-2/images/group-s7f.png
+    - assets/new-mobile-2/images/vector-BjP.png
+    - assets/new-mobile-2/images/auto-group-fvxb.png
+    - assets/new-mobile-2/images/auto-group-xnnm.png
+    - assets/new-mobile-2/images/auto-group-5l3b.png
+    - assets/new-mobile-2/images/vector-ekR.png
+    - assets/new-mobile-2/images/vector-FM3.png
+    - assets/new-mobile-2/images/vector-f6h.png
+    - assets/new-mobile-2/images/top-status-bar-7RB.png
+    - assets/new-mobile-2/images/vector-Sf3.png
+    - assets/new-mobile-2/images/vector-Bfo.png
+    - assets/new-mobile-2/images/vector-RM3.png
+    - assets/new-mobile-2/images/vector-GLy.png
+    - assets/new-mobile-2/images/vector-5ih.png
+    - assets/new-mobile-2/images/vector-3N1.png
+    - assets/new-mobile-2/images/vector-YGy.png
+    - assets/new-mobile-2/images/auto-group-guqh.png
+    - assets/new-mobile-2/images/auto-group-jnfb.png
+    - assets/new-mobile-2/images/auto-group-oe2u.png
+    - assets/new-mobile-2/images/vector-WEM.png
+    - assets/new-mobile-2/images/vector-AyX.png
+    - assets/new-mobile-2/images/auto-group-3n5p.png
+    - assets/new-mobile-2/images/top-status-bar-VrH.png
+    - assets/new-mobile-2/images/vector-LTK.png
+    - assets/new-mobile-2/images/auto-group-pvvh.png
+    - assets/new-mobile-2/images/vector-Yxh.png
+    - assets/new-mobile-2/images/auto-group-uswf.png
+    - assets/new-mobile-2/images/vector-2LR.png
+    - assets/new-mobile-2/images/vector-Zqj.png
+    - assets/new-mobile-2/images/frame-1171274967.png
+    - assets/new-mobile-2/images/vector-3AH.png
+    - assets/new-mobile-2/images/top-status-bar-BRB.png
+    - assets/new-mobile-2/images/vector-9gm.png
+    - assets/new-mobile-2/images/vector-kHF.png
+    - assets/new-mobile-2/images/vector-fzR.png
+    - assets/new-mobile-2/images/vector-12.png
+    - assets/new-mobile-2/images/vector-4C1.png
+    - assets/new-mobile-2/images/vector-Lgq.png
+    - assets/new-mobile-2/images/vector-wiy.png
+    - assets/new-mobile-2/images/vector-gqX.png
+    - assets/new-mobile-2/images/vector-nCR.png
+    - assets/new-mobile-2/images/vector-Keh.png
+    - assets/new-mobile-2/images/vector-jXP.png
+    - assets/new-mobile-2/images/auto-group-dxcv.png
+    - assets/new-mobile-2/images/auto-group-8cqr.png
+    - assets/new-mobile-2/images/vector-P3o.png
+    - assets/new-mobile-2/images/group-zfT.png
+    - assets/new-mobile-2/images/auto-group-aedo.png
+    - assets/new-mobile-2/images/vector-RSH.png
+    - assets/new-mobile-2/images/auto-group-sz6m.png
+    - assets/new-mobile-2/images/vector-DXo.png
+    - assets/new-mobile-2/images/vector-12-FZs.png
+    - assets/new-mobile-2/images/vector-Fhs.png
+    - assets/new-mobile-2/images/vector-aqf.png
+    - assets/new-mobile-2/images/vector-AsK.png
+    - assets/new-mobile-2/images/vector-dqs.png
+    - assets/new-mobile-2/images/vector-Lsb.png
+    - assets/new-mobile-2/images/vector-cv5.png
+    - assets/new-mobile-2/images/vector-wsP.png
+    - assets/new-mobile-2/images/auto-group-kaid.png
+    - assets/new-mobile-2/images/vector-K9B.png
+    - assets/new-mobile-2/images/capa1-7Bf.png
+    - assets/new-mobile-2/images/vector-91s.png
+    - assets/new-mobile-2/images/vector-JDw.png
+    - assets/new-mobile-2/images/top-status-bar-pFK.png
+    - assets/new-mobile-2/images/vector-UNm.png
+    - assets/new-mobile-2/images/vector-23T.png
+    - assets/new-mobile-2/images/vector-12-Skq.png
+    - assets/new-mobile-2/images/nav-bar-57X.png
+    - assets/new-mobile-2/images/top-status-bar-TNR.png
+    - assets/new-mobile-2/images/ellipse-53.png
+    - assets/new-mobile-2/images/vector-F5s.png
+    - assets/new-mobile-2/images/auto-group-fjcz.png
+    - assets/new-mobile-2/images/capa1-F9b.png
+    - assets/new-mobile-2/images/top-status-bar-E6d.png
+    - assets/new-mobile-2/images/group-93-VBX.png
+    - assets/new-mobile-2/images/vector-dtd.png
+    - assets/new-mobile-2/images/nav-bar-MWh.png
+    - assets/new-mobile-2/images/expanddown-zqo.png
+    - assets/new-mobile-2/images/frame-1171274967-Shf.png
+    - assets/new-mobile-2/images/auto-group-ywgh.png
+    - assets/new-mobile-2/images/group-93-2wb.png
+    - assets/new-mobile-2/images/frame-1171274967-ek1.png
+    - assets/new-mobile-2/images/toggle-base.png
+    - assets/new-mobile-2/images/nav-bar-j2Z.png
+    - assets/new-mobile-2/images/top-status-bar-z1f.png
+    - assets/new-mobile-2/images/group-93-igy.png
+    - assets/new-mobile-2/images/expanddown-cYh.png
+    - assets/new-mobile-2/images/vector-12-YZw.png
+    - assets/new-mobile-2/images/nav-bar-gpZ.png
+    - assets/new-mobile-2/images/nav-bar-6G1.png
+    - assets/new-mobile-2/images/top-status-bar-2uf.png
+    - assets/new-mobile-2/images/nav-bar-byj.png
+    - assets/new-mobile-2/images/capa1-Y7T.png
+    - assets/new-mobile-2/images/nav-bar-NTB.png
+    - assets/new-mobile-2/images/vector-qs7.png
+    - assets/new-mobile-2/images/group-1171274970.png
+    - assets/new-mobile-2/images/top-status-bar-fqB.png
+    - assets/new-mobile-2/images/top-status-bar-foo.png
+    - assets/new-mobile-2/images/top-status-bar-Fcu.png
+    - assets/new-mobile-2/images/nav-bar-NTs.png
+    - assets/new-mobile-2/images/top-status-bar-AJV.png
+    - assets/new-mobile-2/images/group-93-sRB.png
+    - assets/new-mobile-2/images/vector-12-uKf.png
+    - assets/new-mobile-2/images/top-status-bar-GLZ.png
+    - assets/new-mobile-2/images/group-1171274970-gEM.png
+    - assets/new-mobile-2/images/vector-12-WC9.png
+    - assets/new-mobile-2/images/nav-bar-7Ds.png
+    - assets/new-mobile-2/images/nav-bar-92h.png
+    - assets/new-mobile-2/images/top-status-bar-gFK.png
+    - assets/new-mobile-2/images/nav-bar-bqT.png
+    - assets/new-mobile-2/images/group-d5s.png
+    - assets/new-mobile-2/images/ellipse-53-Tk5.png
+    - assets/new-mobile-2/images/ellipse-53-n49.png
+    - assets/new-mobile-2/images/group-1171274970-caM.png
+    - assets/new-mobile-2/images/vector-12-jGm.png
+    - assets/new-mobile-2/images/capa1-Sbj.png
+    - assets/new-mobile-2/images/group-1171274931.png
+    - assets/new-mobile-2/images/vector-12-jW9.png
+    - assets/new-mobile-2/images/ellipse-53-6yF.png
+    - assets/new-mobile-2/images/vector-XSH.png
+    - assets/new-mobile-2/images/auto-group-klmx.png
+    - assets/new-mobile-2/images/top-status-bar-Nhf.png
+    - assets/new-mobile-2/images/top-status-bar-u6H.png
+    - assets/new-mobile-2/images/top-status-bar-bof.png
+    - assets/new-mobile-2/images/group-93-fo7.png
+    - assets/new-mobile-2/images/vector-TfP.png
+    - assets/new-mobile-2/images/top-status-bar-WBT.png
+    - assets/new-mobile-2/images/frame-1171274967-SWM.png
+    - assets/new-mobile-2/images/nav-bar-Gth.png
+    - assets/new-mobile-2/images/group-1171274970-sdB.png
+    - assets/new-mobile-2/images/group-1171274978.png
+    - assets/new-mobile-2/images/group-36.png
+    - assets/new-mobile-2/images/top-status-bar-C6u.png
+    - assets/new-mobile-2/images/group-1171274978-oPf.png
+    - assets/new-mobile-2/images/group-93-gyF.png
+    - assets/new-mobile-2/images/nav-bar-cP3.png
+    - assets/new-mobile-2/images/top-status-bar-GiV.png
+    - assets/new-mobile-2/images/ellipse-53-nCy.png
+    - assets/new-mobile-2/images/vector-de9.png
+    - assets/new-mobile-2/images/nav-bar-nX3.png
+    - assets/new-mobile-2/images/group-93-MJZ.png
+    - assets/new-mobile-2/images/top-status-bar-RyK.png
+    - assets/new-mobile-2/images/nav-bar-3cd.png
+    - assets/new-mobile-2/images/group-93-uhK.png
+    - assets/new-mobile-2/images/nav-bar-1zR.png
+    - assets/new-mobile-2/images/nav-bar-UVF.png
+    - assets/new-mobile-2/images/vector-Amw.png
+    - assets/new-mobile-2/images/ellipse-53-CbK.png
+    - assets/new-mobile-2/images/top-status-bar-8HF.png
+    - assets/new-mobile-2/images/group-1171274931-mbf.png
+    - assets/new-mobile-2/images/group-1171274970-gws.png
+    - assets/new-mobile-2/images/nav-bar-9hs.png
+    - assets/new-mobile-2/images/group-93-1WR.png
+    - assets/new-mobile-2/images/top-status-bar-Eoj.png
+    - assets/new-mobile-2/images/top-status-bar-c5F.png
+    - assets/new-mobile-2/images/group-93-KF7.png
+    - assets/new-mobile-2/images/group-93-ZVT.png
+    - assets/new-mobile-2/images/ellipse-53-zyf.png
+    - assets/new-mobile-2/images/nav-bar-H9K.png
+    - assets/new-mobile-2/images/nav-bar-Aiu.png
+    - assets/new-mobile-2/images/top-status-bar-tQ1.png
+    - assets/new-mobile-2/images/nav-bar-S73.png
+    - assets/new-mobile-2/images/checkroundfill.png
+    - assets/new-mobile-2/images/ellipse-53-vYR.png
+    - assets/new-mobile-2/images/top-status-bar-Tdj.png
+    - assets/new-mobile-2/images/capa1-o1K.png
+    - assets/new-mobile-2/images/top-status-bar-4Dw.png
+    - assets/new-mobile-2/images/group-1171274970-3CV.png
+    - assets/new-mobile-2/images/ellipse-54-bg.png
+    - assets/new-mobile-2/images/vector-YnD.png
+    - assets/new-mobile-2/images/ellipse-56-bg.png
+    - assets/new-mobile-2/images/capa1-ByK.png
+    - assets/new-mobile-2/images/ellipse-54-bg-wWq.png
+    - assets/new-mobile-2/images/ellipse-54-bg-DAZ.png
+    - assets/new-mobile-2/images/ellipse-54-bg-Qgy.png
+    - assets/new-mobile-2/images/ellipse-54-bg-oDs.png
+    - assets/new-mobile-2/images/ellipse-54-bg-3uT.png
+    - assets/new-mobile-2/images/ellipse-54-bg-quj.png
+    - assets/new-mobile-2/images/ellipse-54-bg-8d7.png
+    - assets/new-mobile-2/images/ellipse-54-bg-M2Z.png
+
