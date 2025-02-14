@@ -650,7 +650,7 @@ class _ChannelDashboardState extends State<ChannelDashboard> {
                                                   ),
                                                 ),
                                                 TextSpan(
-                                                  text: 'KSE',
+                                                  text: 'KES',
                                                   style: SafeGoogleFont(
                                                     'Inter',
                                                     fontSize: 14 * ffem,
