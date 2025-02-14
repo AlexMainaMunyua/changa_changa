@@ -632,9 +632,9 @@ class _ParticipantsState extends State<Statements> {
           ),
         ),
       ),
-      bottomNavigationBar: BottomNavBar(
-        channelReadData: widget.channelData!,
-      ),
+      // bottomNavigationBar: BottomNavBar(
+      //   channelReadData: widget.channelData!,
+      // ),
     );
   }
 }

@@ -48,7 +48,9 @@ class _ParticipantsState extends State<Participants> {
     setState(() {
       _isLoading = true;
     });
-    ChannelRead? data = await readChannel(chanId!, accessToken!);
+   // ChannelRead? data = await readChannel(chanId!, accessToken!);
+    ChannelRead data = ChannelRead();
+
     if (data.participants != null) {
       for (Participant participant in data.participants!) {
         if (participant.is_admin!) {
@@ -61,7 +63,7 @@ class _ParticipantsState extends State<Participants> {
       }
     }
     setState(() {
-      widget.channelData = data;
+   //   widget.channelData = data;
       _isLoading = false;
     });
   }
@@ -738,9 +740,9 @@ class _ParticipantsState extends State<Participants> {
           ),
         ),
       ),
-      bottomNavigationBar: BottomNavBar(
-        channelReadData: widget.channelData,
-      ),
+      // bottomNavigationBar: BottomNavBar(
+      //   channelReadData: widget.channelData,
+      // ),
     );
   }
 }

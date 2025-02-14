@@ -179,10 +179,10 @@ class Category {
 }
 
 class Participant {
-  User? user;
+  User user;
   bool? is_admin;
 
-  Participant({this.user, this.is_admin});
+  Participant({required this.user, this.is_admin});
 
   factory Participant.fromJson(Map<String, dynamic> json) {
     return Participant(

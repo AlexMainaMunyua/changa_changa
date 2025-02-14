@@ -20,9 +20,9 @@ import '../logic/statements/statements.dart';
 
 class ChannelDashboard extends StatefulWidget {
   ChannelRead channelData;
-  String accessToken;
+  String? accessToken;
   ChannelDashboard(
-      {super.key, required this.channelData, required this.accessToken});
+      {super.key, required this.channelData,  this.accessToken});
 
   @override
   State<ChannelDashboard> createState() => _ChannelDashboardState();
@@ -295,7 +295,7 @@ class _ChannelDashboardState extends State<ChannelDashboard> {
       _accessToken = widget.accessToken;
     });
     _loaduserData();
-    _loadCurrentStatemets(widget.accessToken, widget.channelData.channel_id!);
+    _loadCurrentStatemets(widget.accessToken!, widget.channelData.channel_id!);
     _loadChannelData(
         accessToken: _accessToken, chanId: widget.channelData.channel_id!);
   }
@@ -334,7 +334,7 @@ class _ChannelDashboardState extends State<ChannelDashboard> {
       body: RefreshIndicator(
         onRefresh: () async {
           _loadCurrentStatemets(
-              widget.accessToken, widget.channelData.channel_id!);
+              widget.accessToken!, widget.channelData.channel_id!);
           _loadChannelData(
               accessToken: _accessToken,
               chanId: widget.channelData.channel_id!);
@@ -531,13 +531,13 @@ class _ChannelDashboardState extends State<ChannelDashboard> {
                                                             _phone
                                                         ? DropDown(
                                                             accessToken: widget
-                                                                .accessToken,
+                                                                .accessToken!,
                                                             channelData: widget
                                                                 .channelData,
                                                           )
                                                         : DropDownLeave(
                                                             accessToken: widget
-                                                                .accessToken,
+                                                                .accessToken!,
                                                             channelData: widget
                                                                 .channelData,
                                                           )
