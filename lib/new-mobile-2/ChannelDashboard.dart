@@ -60,9 +60,202 @@ class _ChannelDashboardState extends State<ChannelDashboard> {
 
   Future<void> _loadCurrentStatemets(
       String accessToken, String channelNumber) async {
-    List<Payment> statements =
-        await fetchStatements(accessToken, channelNumber);
+    // List<Payment> statements =
+    //     await fetchStatements(accessToken, channelNumber);
+    List<Payment> statements = [
+      Payment(
+        transactionType: 'Credit',
+        amount: 100.50,
+        reason: 'Payment for service',
+        paymentReferenceId: 'REF123456',
+        transactionId: 'TX123456789',
+        user : User(
+          firstName: "Alex",
+          username: "alex123",
+          emailAddress: "alex@example.com",
+          phoneNumber: "123-456-7890",
+          isActive: true,
+          userId: "U12345",
+          title: "Mr.",
+          dateJoinedUtc: DateTime.utc(2023, 5, 1),
+        ),
+        channelId: 'MobileApp',
+        timestampUtc: DateTime.utc(2025, 2, 14, 10, 30),
+      ),
+      Payment(
+        transactionType: 'Credit',
+        amount: 100.50,
+        reason: 'Payment for service',
+        paymentReferenceId: 'REF123456',
+        transactionId: 'TX123456789',
+        user : User(
+          firstName: "Alex",
+          username: "alex123",
+          emailAddress: "alex@example.com",
+          phoneNumber: "123-456-7890",
+          isActive: true,
+          userId: "U12345",
+          title: "Mr.",
+          dateJoinedUtc: DateTime.utc(2023, 5, 1),
+        ),
+        channelId: 'MobileApp',
+        timestampUtc: DateTime.utc(2025, 2, 14, 10, 30),
+      ),
+      Payment(
+        transactionType: 'Credit',
+        amount: 100.50,
+        reason: 'Payment for service',
+        paymentReferenceId: 'REF123456',
+        transactionId: 'TX123456789',
+        user : User(
+          firstName: "Alex",
+          username: "alex123",
+          emailAddress: "alex@example.com",
+          phoneNumber: "123-456-7890",
+          isActive: true,
+          userId: "U12345",
+          title: "Mr.",
+          dateJoinedUtc: DateTime.utc(2023, 5, 1),
+        ),
+        channelId: 'MobileApp',
+        timestampUtc: DateTime.utc(2025, 2, 14, 10, 30),
+      ),
+      Payment(
+        transactionType: 'Credit',
+        amount: 1200000.50,
+        reason: 'Payment for service',
+        paymentReferenceId: 'REF123456',
+        transactionId: 'TX123456789',
+        user : User(
+          firstName: "Alex",
+          username: "alex123",
+          emailAddress: "alex@example.com",
+          phoneNumber: "123-456-7890",
+          isActive: true,
+          userId: "U12345",
+          title: "Mr.",
+          dateJoinedUtc: DateTime.utc(2023, 5, 1),
+        ),
+        channelId: 'MobileApp',
+        timestampUtc: DateTime.utc(2025, 2, 14, 10, 30),
+      ),
+      Payment(
+        transactionType: 'Credit',
+        amount: 100.50,
+        reason: 'Payment for service',
+        paymentReferenceId: 'REF123456',
+        transactionId: 'TX123456789',
+        user : User(
+          firstName: "Alex",
+          username: "alex123",
+          emailAddress: "alex@example.com",
+          phoneNumber: "123-456-7890",
+          isActive: true,
+          userId: "U12345",
+          title: "Mr.",
+          dateJoinedUtc: DateTime.utc(2023, 5, 1),
+        ),
+        channelId: 'MobileApp',
+        timestampUtc: DateTime.utc(2025, 2, 14, 10, 30),
+      ),
+      Payment(
+        transactionType: 'Credit',
+        amount: 100.50,
+        reason: 'Payment for service',
+        paymentReferenceId: 'REF123456',
+        transactionId: 'TX123456789',
+        user : User(
+          firstName: "Alex",
+          username: "alex123",
+          emailAddress: "alex@example.com",
+          phoneNumber: "123-456-7890",
+          isActive: true,
+          userId: "U12345",
+          title: "Mr.",
+          dateJoinedUtc: DateTime.utc(2023, 5, 1),
+        ),
+        channelId: 'MobileApp',
+        timestampUtc: DateTime.utc(2025, 2, 14, 10, 30),
+      ),
+      Payment(
+        transactionType: 'Credit',
+        amount: 100.50,
+        reason: 'Payment for service',
+        paymentReferenceId: 'REF123456',
+        transactionId: 'TX123456789',
+        user : User(
+          firstName: "Alex",
+          username: "alex123",
+          emailAddress: "alex@example.com",
+          phoneNumber: "123-456-7890",
+          isActive: true,
+          userId: "U12345",
+          title: "Mr.",
+          dateJoinedUtc: DateTime.utc(2023, 5, 1),
+        ),
+        channelId: 'MobileApp',
+        timestampUtc: DateTime.utc(2025, 2, 14, 10, 30),
+      ),
+      Payment(
+        transactionType: 'Debit',
+        amount: 200.75,
+        reason: 'Refund for order #456',
+        paymentReferenceId: 'REF789012',
+        transactionId: 'TX987654321',
+     user : User(
+    firstName: "Alex",
+    username: "alex123",
+    emailAddress: "alex@example.com",
+    phoneNumber: "123-456-7890",
+    isActive: true,
+    userId: "U12345",
+    title: "Mr.",
+    dateJoinedUtc: DateTime.utc(2023, 5, 1),
+    ),
+        channelId: 'WebApp',
+        timestampUtc: DateTime.utc(2025, 2, 13, 15, 45),
+      ),
+      Payment(
+        transactionType: 'Credit',
+        amount: 50.25,
+        reason: 'Bonus payment',
+        paymentReferenceId: 'REF345678',
+        transactionId: 'TX192837465',
+        user : User(
+          firstName: "Alex",
+          username: "alex123",
+          emailAddress: "alex@example.com",
+          phoneNumber: "123-456-7890",
+          isActive: true,
+          userId: "U12345",
+          title: "Mr.",
+          dateJoinedUtc: DateTime.utc(2023, 5, 1),
+        ),
+        channelId: 'MobileApp',
+        timestampUtc: DateTime.utc(2025, 2, 12, 9, 15),
+      ),
+      Payment(
+        transactionType: 'Debit',
+        amount: 75.00,
+        reason: 'Payment for subscription',
+        paymentReferenceId: 'REF234567',
+        transactionId: 'TX564738291',
+        user : User(
+          firstName: "Alex",
+          username: "alex123",
+          emailAddress: "alex@example.com",
+          phoneNumber: "123-456-7890",
+          isActive: true,
+          userId: "U12345",
+          title: "Mr.",
+          dateJoinedUtc: DateTime.utc(2023, 5, 1),
+        ),
+        channelId: 'WebApp',
+        timestampUtc: DateTime.utc(2025, 2, 11, 18, 00),
+      ),
+    ];
     if (statements.isNotEmpty) {
+
       setState(() {
         channelStatements = statements;
       });
@@ -73,7 +266,8 @@ class _ChannelDashboardState extends State<ChannelDashboard> {
     setState(() {
       _isLoading = true;
     });
-    ChannelRead? data = await readChannel(chanId!, accessToken!);
+  //  ChannelRead? data = await readChannel(chanId!, accessToken!);
+    ChannelRead data = ChannelRead();
     if (data.participants != null) {
       for (Participant participant in data.participants!) {
         if (participant.is_admin!) {
@@ -85,7 +279,7 @@ class _ChannelDashboardState extends State<ChannelDashboard> {
       }
     }
     setState(() {
-      widget.channelData = data;
+   //   widget.channelData = data;
       _isLoading = false;
     });
   }
@@ -361,254 +555,255 @@ class _ChannelDashboardState extends State<ChannelDashboard> {
                             ),
                           ),
                         ),
-                        // Positioned(
-                        //   // rectangle5Ksf (2967:8468)
-                        //   left: 0 * fem,
-                        //   top: 111.1662597656 * fem,
-                        //   child: Align(
-                        //     child: SizedBox(
-                        //       width: 414 * fem,
-                        //       height: 784.83 * fem,
-                        //       child: Container(
-                        //         decoration: const BoxDecoration(
-                        //           color: Color(0xffffffff),
-                        //         ),
-                        //       ),
-                        //     ),
-                        //   ),
-                        // ),
-                        // Positioned(
-                        //   // frame1171274987pZX (2967:8493)
-                        //   left: 0 * fem,
-                        //   top: 218 * fem,
-                        //   child: Container(
-                        //     width: 414 * fem,
-                        //     height: 155 * fem,
-                        //     decoration: const BoxDecoration(
-                        //       color: Color(0x0c043e4d),
-                        //     ),
-                        //     child: Stack(
-                        //       children: [
-                        //         Positioned(
-                        //           // frame1560jRb (2967:8495)
-                        //           left: 15 * fem,
-                        //           top: 17 * fem,
-                        //           child: SizedBox(
-                        //             width: 255 * fem,
-                        //             height: 66 * fem,
-                        //             child: Align(
-                        //               // moneyin16000000000000kseqzR (2967:8496)
-                        //               alignment: Alignment.topLeft,
-                        //               child: SizedBox(
-                        //                 child: Container(
-                        //                   constraints: BoxConstraints(
-                        //                     maxWidth: 255 * fem,
-                        //                   ),
-                        //                   child: RichText(
-                        //                     text: TextSpan(
-                        //                       style: SafeGoogleFont(
-                        //                         'Inter',
-                        //                         fontSize: 25 * ffem,
-                        //                         fontWeight: FontWeight.w500,
-                        //                         height: 1.3 * ffem / fem,
-                        //                         color: const Color(0xe5000000),
-                        //                       ),
-                        //                       children: [
-                        //                         TextSpan(
-                        //                           text: 'Money in\n',
-                        //                           style: SafeGoogleFont(
-                        //                             'Inter',
-                        //                             fontSize: 14 * ffem,
-                        //                             fontWeight: FontWeight.w500,
-                        //                             height: 1.2999999183 *
-                        //                                 ffem /
-                        //                                 fem,
-                        //                             color:
-                        //                                 const Color(0xe5606060),
-                        //                           ),
-                        //                         ),
-                        //                         TextSpan(
-                        //                           text:
-                        //                               '${widget.channelData.total_collected}',
-                        //                           style: SafeGoogleFont(
-                        //                             'Inter',
-                        //                             fontSize: 22 * ffem,
-                        //                             fontWeight: FontWeight.w600,
-                        //                             height: 1.2999999306 *
-                        //                                 ffem /
-                        //                                 fem,
-                        //                             color:
-                        //                                 const Color(0xff00313d),
-                        //                           ),
-                        //                         ),
-                        //                         TextSpan(
-                        //                           text: ' ',
-                        //                           style: SafeGoogleFont(
-                        //                             'Inter',
-                        //                             fontSize: 24 * ffem,
-                        //                             fontWeight: FontWeight.w600,
-                        //                             height: 1.2999999523 *
-                        //                                 ffem /
-                        //                                 fem,
-                        //                             color:
-                        //                                 const Color(0xe5000000),
-                        //                           ),
-                        //                         ),
-                        //                         TextSpan(
-                        //                           text: 'KSE',
-                        //                           style: SafeGoogleFont(
-                        //                             'Inter',
-                        //                             fontSize: 14 * ffem,
-                        //                             fontWeight: FontWeight.w600,
-                        //                             height: 1.2999999183 *
-                        //                                 ffem /
-                        //                                 fem,
-                        //                             color:
-                        //                                 const Color(0xcc606060),
-                        //                           ),
-                        //                         ),
-                        //                       ],
-                        //                     ),
-                        //                   ),
-                        //                 ),
-                        //               ),
-                        //             ),
-                        //           ),
-                        //         ),
-                        //         Positioned(
-                        //           // frame1560RUm (2967:8499)
-                        //           left: 15 * fem,
-                        //           top: 79 * fem,
-                        //           child: SizedBox(
-                        //             width: 199 * fem,
-                        //             height: 61 * fem,
-                        //             child: RichText(
-                        //               text: TextSpan(
-                        //                 style: SafeGoogleFont(
-                        //                   'Inter',
-                        //                   fontSize: 25 * ffem,
-                        //                   fontWeight: FontWeight.w500,
-                        //                   height: 1.3 * ffem / fem,
-                        //                   color: const Color(0xe5000000),
-                        //                 ),
-                        //                 children: [
-                        //                   TextSpan(
-                        //                     text: 'Target\n',
-                        //                     style: SafeGoogleFont(
-                        //                       'Inter',
-                        //                       fontSize: 14 * ffem,
-                        //                       fontWeight: FontWeight.w500,
-                        //                       height: 1.2999999183 * ffem / fem,
-                        //                       color: const Color(0xe5606060),
-                        //                     ),
-                        //                   ),
-                        //                   TextSpan(
-                        //                     text:
-                        //                         '${widget.channelData.target}',
-                        //                     style: SafeGoogleFont(
-                        //                       'Inter',
-                        //                       fontSize: 16 * ffem,
-                        //                       fontWeight: FontWeight.w500,
-                        //                       height: 2.03125 * ffem / fem,
-                        //                       color: const Color(0xff00313d),
-                        //                     ),
-                        //                   ),
-                        //                   TextSpan(
-                        //                     text: ' ',
-                        //                     style: SafeGoogleFont(
-                        //                       'Inter',
-                        //                       fontSize: 16 * ffem,
-                        //                       fontWeight: FontWeight.w500,
-                        //                       height: 2.03125 * ffem / fem,
-                        //                       color: const Color(0xe5000000),
-                        //                     ),
-                        //                   ),
-                        //                   TextSpan(
-                        //                     text: 'KES',
-                        //                     style: SafeGoogleFont(
-                        //                       'Inter',
-                        //                       fontSize: 9 * ffem,
-                        //                       fontWeight: FontWeight.w700,
-                        //                       height: 3.6111111111 * ffem / fem,
-                        //                       color: const Color(0xcc606060),
-                        //                     ),
-                        //                   ),
-                        //                 ],
-                        //               ),
-                        //             ),
-                        //           ),
-                        //         ),
-                        //         Positioned(
-                        //           // group1171274974Z77 (2967:8502)
-                        //           left: 15 * fem,
-                        //           top: 117 * fem,
-                        //           child: Container(
-                        //             width: 384 * fem,
-                        //             height: 23 * fem,
-                        //             decoration: BoxDecoration(
-                        //               borderRadius:
-                        //                   BorderRadius.circular(100 * fem),
-                        //             ),
-                        //             child: Column(
-                        //               crossAxisAlignment:
-                        //                   CrossAxisAlignment.center,
-                        //               children: [
-                        //                 Container(
-                        //                   // 4Jm (2967:8506)
-                        //                   margin: EdgeInsets.fromLTRB(0 * fem,
-                        //                       0 * fem, 3.42 * fem, 4 * fem),
-                        //                   child: Text(
-                        //                     '${percetage(target: widget.channelData.target!, moneyin: widget.channelData.total_collected!)}',
-                        //                     style: SafeGoogleFont(
-                        //                       'Inter',
-                        //                       fontSize: 10 * ffem,
-                        //                       fontWeight: FontWeight.w500,
-                        //                       height: 1.2 * ffem / fem,
-                        //                       color: const Color(0x7f000000),
-                        //                     ),
-                        //                   ),
-                        //                 ),
-                        //                 SizedBox(
-                        //                   width: double.infinity,
-                        //                   height: 7 * fem,
-                        //                   child: LinearPercentIndicator(
-                        //                     lineHeight: double.infinity,
-                        //                     percent: percetage(
-                        //                                     target: widget
-                        //                                         .channelData
-                        //                                         .target!,
-                        //                                     moneyin: widget
-                        //                                         .channelData
-                        //                                         .total_collected!) /
-                        //                                 100 >
-                        //                             1.0
-                        //                         ? 1
-                        //                         : percetage(
-                        //                                 target: widget
-                        //                                     .channelData
-                        //                                     .target!,
-                        //                                 moneyin: widget
-                        //                                     .channelData
-                        //                                     .total_collected!) /
-                        //                             100,
-                        //                     animation: true,
-                        //                     barRadius:
-                        //                         const Radius.circular(16),
-                        //                     progressColor:
-                        //                         const Color(0xffadd354),
-                        //                     backgroundColor:
-                        //                         const Color.fromARGB(
-                        //                             255, 255, 255, 255),
-                        //                   ),
-                        //                 ),
-                        //               ],
-                        //             ),
-                        //           ),
-                        //         ),
-                        //       ],
-                        //     ),
-                        //   ),
-                        // ),
+                        Positioned(
+                          // rectangle5Ksf (2967:8468)
+                          left: 0 * fem,
+                          top: 111.1662597656 * fem,
+                          child: Align(
+                            child: SizedBox(
+                              width: 414 * fem,
+                              height: 784.83 * fem,
+                              child: Container(
+                                decoration: const BoxDecoration(
+                                  color: Color(0xffffffff),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                        // TODO: Added part
+                        Positioned(
+                          // frame1171274987pZX (2967:8493)
+                          left: 0 * fem,
+                          top: 218 * fem,
+                          child: Container(
+                            width: 414 * fem,
+                            height: 155 * fem,
+                            decoration: const BoxDecoration(
+                              color: Color(0x0c043e4d),
+                            ),
+                            child: Stack(
+                              children: [
+                                Positioned(
+                                  // frame1560jRb (2967:8495)
+                                  left: 15 * fem,
+                                  top: 17 * fem,
+                                  child: SizedBox(
+                                    width: 255 * fem,
+                                    height: 66 * fem,
+                                    child: Align(
+                                      // moneyin16000000000000kseqzR (2967:8496)
+                                      alignment: Alignment.topLeft,
+                                      child: SizedBox(
+                                        child: Container(
+                                          constraints: BoxConstraints(
+                                            maxWidth: 255 * fem,
+                                          ),
+                                          child: RichText(
+                                            text: TextSpan(
+                                              style: SafeGoogleFont(
+                                                'Inter',
+                                                fontSize: 25 * ffem,
+                                                fontWeight: FontWeight.w500,
+                                                height: 1.3 * ffem / fem,
+                                                color: const Color(0xe5000000),
+                                              ),
+                                              children: [
+                                                TextSpan(
+                                                  text: 'Money in\n',
+                                                  style: SafeGoogleFont(
+                                                    'Inter',
+                                                    fontSize: 14 * ffem,
+                                                    fontWeight: FontWeight.w500,
+                                                    height: 1.2999999183 *
+                                                        ffem /
+                                                        fem,
+                                                    color:
+                                                        const Color(0xe5606060),
+                                                  ),
+                                                ),
+                                                TextSpan(
+                                                  text:
+                                                      '${widget.channelData.total_collected}',
+                                                  style: SafeGoogleFont(
+                                                    'Inter',
+                                                    fontSize: 22 * ffem,
+                                                    fontWeight: FontWeight.w600,
+                                                    height: 1.2999999306 *
+                                                        ffem /
+                                                        fem,
+                                                    color:
+                                                        const Color(0xff00313d),
+                                                  ),
+                                                ),
+                                                TextSpan(
+                                                  text: ' ',
+                                                  style: SafeGoogleFont(
+                                                    'Inter',
+                                                    fontSize: 24 * ffem,
+                                                    fontWeight: FontWeight.w600,
+                                                    height: 1.2999999523 *
+                                                        ffem /
+                                                        fem,
+                                                    color:
+                                                        const Color(0xe5000000),
+                                                  ),
+                                                ),
+                                                TextSpan(
+                                                  text: 'KSE',
+                                                  style: SafeGoogleFont(
+                                                    'Inter',
+                                                    fontSize: 14 * ffem,
+                                                    fontWeight: FontWeight.w600,
+                                                    height: 1.2999999183 *
+                                                        ffem /
+                                                        fem,
+                                                    color:
+                                                        const Color(0xcc606060),
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                Positioned(
+                                  // frame1560RUm (2967:8499)
+                                  left: 15 * fem,
+                                  top: 79 * fem,
+                                  child: SizedBox(
+                                    width: 199 * fem,
+                                    height: 61 * fem,
+                                    child: RichText(
+                                      text: TextSpan(
+                                        style: SafeGoogleFont(
+                                          'Inter',
+                                          fontSize: 25 * ffem,
+                                          fontWeight: FontWeight.w500,
+                                          height: 1.3 * ffem / fem,
+                                          color: const Color(0xe5000000),
+                                        ),
+                                        children: [
+                                          TextSpan(
+                                            text: 'Target\n',
+                                            style: SafeGoogleFont(
+                                              'Inter',
+                                              fontSize: 14 * ffem,
+                                              fontWeight: FontWeight.w500,
+                                              height: 1.2999999183 * ffem / fem,
+                                              color: const Color(0xe5606060),
+                                            ),
+                                          ),
+                                          TextSpan(
+                                            text:
+                                                '${widget.channelData.target}',
+                                            style: SafeGoogleFont(
+                                              'Inter',
+                                              fontSize: 16 * ffem,
+                                              fontWeight: FontWeight.w500,
+                                              height: 2.03125 * ffem / fem,
+                                              color: const Color(0xff00313d),
+                                            ),
+                                          ),
+                                          TextSpan(
+                                            text: ' ',
+                                            style: SafeGoogleFont(
+                                              'Inter',
+                                              fontSize: 16 * ffem,
+                                              fontWeight: FontWeight.w500,
+                                              height: 2.03125 * ffem / fem,
+                                              color: const Color(0xe5000000),
+                                            ),
+                                          ),
+                                          TextSpan(
+                                            text: 'KES',
+                                            style: SafeGoogleFont(
+                                              'Inter',
+                                              fontSize: 9 * ffem,
+                                              fontWeight: FontWeight.w700,
+                                              height: 3.6111111111 * ffem / fem,
+                                              color: const Color(0xcc606060),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                Positioned(
+                                  // group1171274974Z77 (2967:8502)
+                                  left: 15 * fem,
+                                  top: 117 * fem,
+                                  child: Container(
+                                    width: 384 * fem,
+                                    height: 23 * fem,
+                                    decoration: BoxDecoration(
+                                      borderRadius:
+                                          BorderRadius.circular(100 * fem),
+                                    ),
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
+                                      children: [
+                                        // Container(
+                                        //   // 4Jm (2967:8506)
+                                        //   margin: EdgeInsets.fromLTRB(0 * fem,
+                                        //       0 * fem, 3.42 * fem, 4 * fem),
+                                        //   child: Text(
+                                        //     '${percetage(target: widget.channelData.target!, moneyin: widget.channelData.total_collected!)}',
+                                        //     style: SafeGoogleFont(
+                                        //       'Inter',
+                                        //       fontSize: 10 * ffem,
+                                        //       fontWeight: FontWeight.w500,
+                                        //       height: 1.2 * ffem / fem,
+                                        //       color: const Color(0x7f000000),
+                                        //     ),
+                                        //   ),
+                                        // ),
+                                        // SizedBox(
+                                        //   width: double.infinity,
+                                        //   height: 7 * fem,
+                                        //   child: LinearPercentIndicator(
+                                        //     lineHeight: double.infinity,
+                                        //     percent: percetage(
+                                        //                     target: widget
+                                        //                         .channelData
+                                        //                         .target!,
+                                        //                     moneyin: widget
+                                        //                         .channelData
+                                        //                         .total_collected!) /
+                                        //                 100 >
+                                        //             1.0
+                                        //         ? 1
+                                        //         : percetage(
+                                        //                 target: widget
+                                        //                     .channelData
+                                        //                     .target!,
+                                        //                 moneyin: widget
+                                        //                     .channelData
+                                        //                     .total_collected!) /
+                                        //             100,
+                                        //     animation: true,
+                                        //     barRadius:
+                                        //         const Radius.circular(16),
+                                        //     progressColor:
+                                        //         const Color(0xffadd354),
+                                        //     backgroundColor:
+                                        //         const Color.fromARGB(
+                                        //             255, 255, 255, 255),
+                                        //   ),
+                                        // ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
                         Positioned(
                           // group1171274976qiq (2967:8507)
                           left: 15 * fem,
