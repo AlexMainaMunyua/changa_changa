@@ -136,8 +136,8 @@ class _BottomNavBarState extends State<BottomNavBarDash> {
                   context,
                   MaterialPageRoute(
                     builder: (context) => Statements(
-                      channelData: widget.channelReadData,
-                      accessToken: _accessToken!,
+                       channelData: widget.channelReadData,
+                      // accessToken: _accessToken!,
                     ),
                   ),
                 );

@@ -1,6 +1,7 @@
 // ignore_for_file: must_be_immutable
 
 import 'dart:convert';
+import 'dart:math';
 
 import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
 import 'package:changa_changa/logic/channels/channels.dart';
@@ -19,9 +20,9 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:http/http.dart' as http;
 
 class Statements extends StatefulWidget {
-  ChannelRead channelData;
-  String accessToken;
-  Statements({super.key, required this.channelData, required this.accessToken});
+  ChannelRead? channelData;
+  String? accessToken;
+  Statements({super.key,  this.channelData,  this.accessToken});
 
   @override
   State<Statements> createState() => _ParticipantsState();
@@ -58,7 +59,7 @@ class _ParticipantsState extends State<Statements> {
       try {
         List<Payment> statements = await fetchStatementsPaginated(
           accessToken: accessToken!,
-          channelNumber: widget.channelData.channel_id!,
+          channelNumber: widget.channelData!.channel_id!,
           limit: limitNumber,
           page: pageNumber,
         );
@@ -81,6 +82,34 @@ class _ParticipantsState extends State<Statements> {
     }
   }
 
+  // Function to generate dummy data
+  List<Payment> generateDummyPayments(int numberOfPayments) {
+    List<Payment> payments = [];
+    var random = Random();
+
+    for (int i = 0; i < numberOfPayments; i++) {
+      var userId = 'user${random.nextInt(1000)}';
+      var username = 'User_${random.nextInt(100)}';
+      var user = User(userId: userId, firstName: "joe doe", username: username);
+
+      payments.add(Payment(
+        transactionType: random.nextBool() ? 'Credit' : 'Debit',
+        amount: (random.nextDouble() * 1000).toDouble(),
+        reason: 'Payment for service ${random.nextInt(5) + 1}',
+        paymentReferenceId: 'ref${random.nextInt(10000)}',
+        transactionId: 'txn${random.nextInt(100000)}',
+        user: user,
+        channelId: 'channel${random.nextInt(10)}',
+        timestampUtc: DateTime.utc(
+          2025, random.nextInt(12) + 1, random.nextInt(28) + 1, random.nextInt(24),
+          random.nextInt(60), random.nextInt(60),
+        ),
+      ));
+    }
+
+    return payments;
+  }
+
   void _firstLoad(
     String? channelNumber,
     String? accessToken,
@@ -89,12 +118,15 @@ class _ParticipantsState extends State<Statements> {
       _isLoading = true;
     });
     try {
-      List<Payment> statements = await fetchStatementsPaginated(
-        accessToken: accessToken!,
-        channelNumber: widget.channelData.channel_id!,
-        limit: limitNumber,
-        page: pageNumber,
-      );
+      // List<Payment> statements = await fetchStatementsPaginated(
+      //   accessToken: accessToken!,
+      //   channelNumber: widget.channelData!.channel_id!,
+      //   limit: limitNumber,
+      //   page: pageNumber,
+      // );
+
+      List<Payment> statements = generateDummyPayments(15); // Generate 10 dummy payments
+
       setState(() {
         channelStatements = statements;
       });
@@ -182,12 +214,12 @@ class _ParticipantsState extends State<Statements> {
     super.initState();
     _loaduserData();
     _loadChannelData(
-        accessToken: widget.accessToken, chanId: widget.channelData.channel_id);
-    _firstLoad(widget.channelData.channel_id, widget.accessToken);
+        accessToken: widget.accessToken, chanId: widget.channelData!.channel_id);
+    _firstLoad(widget.channelData!.channel_id, widget.accessToken);
     _controller = ScrollController()
       ..addListener(
         () {
-          _loadMore(widget.channelData.channel_id, widget.accessToken);
+          _loadMore(widget.channelData!.channel_id, widget.accessToken);
         },
       );
   }
@@ -250,8 +282,8 @@ class _ParticipantsState extends State<Statements> {
                             setState(() {
                               isGenerationLinkLoading = true;
                             });
-                            generatePaymentLink(widget.channelData.channel_id!,
-                                widget.accessToken);
+                            generatePaymentLink(widget.channelData!.channel_id!,
+                                widget.accessToken!);
                             setState(() {
                               isGenerationLinkLoading = false;
                             });
@@ -300,122 +332,122 @@ class _ParticipantsState extends State<Statements> {
                   height: height,
                   child: Stack(
                     children: [
-                      Positioned(
-                        // group1171274977dTw (2955:14032)
-                        left: 0 * fem,
-                        top: 0 * fem,
-                        child: SizedBox(
-                          width: 414 * fem,
-                          height: 323 * fem,
-                          child: Stack(
-                            children: [
-                              Positioned(
-                                // frame3Lt9 (2955:14033)
-                                left: 0 * fem,
-                                top: 0 * fem,
-                                child: Container(
-                                  padding: EdgeInsets.fromLTRB(
-                                      0 * fem, 0 * fem, 0 * fem, 15 * fem),
-                                  width: 414 * fem,
-                                  height: 102.27 * fem,
-                                  decoration: const BoxDecoration(
-                                    color: Color(0xff00313d),
-                                  ),
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    children: [
-                                      Container(
-                                        // frame1573YjK (2955:14034)
-                                        margin: EdgeInsets.fromLTRB(20 * fem,
-                                            65 * fem, 20 * fem, 0 * fem),
-                                        width: double.infinity,
-                                        height: 20 * fem,
-                                        child: Row(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.center,
-                                          children: [
-                                            InkWell(
-                                              onTap: () {
-                                                Navigator.pop(context);
-                                              },
-                                              child: SizedBox(
-                                                // navbarGfK (2955:14035)
-                                                width: 20.08 * fem,
-                                                height: 20 * fem,
-                                                child: Image.asset(
-                                                  'assets/new-mobile-2/images/nav-bar-6G1.png',
-                                                  width: 20.08 * fem,
-                                                  height: 20 * fem,
-                                                ),
-                                              ),
-                                            ),
-                                            Container(
-                                              // autogroup4qghzbK (WNzjpcS2DLcCToR4kW4QGh)
-                                              padding: EdgeInsets.fromLTRB(
-                                                  113.93 * fem,
-                                                  2 * fem,
-                                                  0 * fem,
-                                                  2 * fem),
-                                              height: double.infinity,
-                                              child: Row(
-                                                crossAxisAlignment:
-                                                    CrossAxisAlignment.center,
-                                                children: [
-                                                  Container(
-                                                    // participantuiH (2955:14040)
-                                                    margin: EdgeInsets.fromLTRB(
-                                                        0 * fem,
-                                                        0 * fem,
-                                                        113.93 * fem,
-                                                        0 * fem),
-                                                    child: Text(
-                                                      'Statements',
-                                                      textAlign:
-                                                          TextAlign.center,
-                                                      style: SafeGoogleFont(
-                                                        'Inter',
-                                                        fontSize: 18 * ffem,
-                                                        fontWeight:
-                                                            FontWeight.w400,
-                                                        height: 0.8888888889 *
-                                                            ffem /
-                                                            fem,
-                                                        letterSpacing:
-                                                            0.09 * fem,
-                                                        color: const Color(
-                                                            0xffffffff),
-                                                      ),
-                                                    ),
-                                                  ),
-                                                  _admin?.user?.first_name ==
-                                                          _username
-                                                      ? DropDown(
-                                                          accessToken: widget
-                                                              .accessToken,
-                                                          channelData: widget
-                                                              .channelData,
-                                                        )
-                                                      : DropDownLeave(
-                                                          accessToken: widget
-                                                              .accessToken,
-                                                          channelData: widget
-                                                              .channelData,
-                                                        )
-                                                ],
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
+                      // Positioned(
+                      //   // group1171274977dTw (2955:14032)
+                      //   left: 0 * fem,
+                      //   top: 0 * fem,
+                      //   child: SizedBox(
+                      //     width: 414 * fem,
+                      //     height: 323 * fem,
+                      //     child: Stack(
+                      //       children: [
+                      //         Positioned(
+                      //           // frame3Lt9 (2955:14033)
+                      //           left: 0 * fem,
+                      //           top: 0 * fem,
+                      //           child: Container(
+                      //             padding: EdgeInsets.fromLTRB(
+                      //                 0 * fem, 0 * fem, 0 * fem, 15 * fem),
+                      //             width: 414 * fem,
+                      //             height: 102.27 * fem,
+                      //             decoration: const BoxDecoration(
+                      //               color: Color(0xff00313d),
+                      //             ),
+                      //             child: Column(
+                      //               crossAxisAlignment:
+                      //                   CrossAxisAlignment.center,
+                      //               children: [
+                      //                 Container(
+                      //                   // frame1573YjK (2955:14034)
+                      //                   margin: EdgeInsets.fromLTRB(20 * fem,
+                      //                       65 * fem, 20 * fem, 0 * fem),
+                      //                   width: double.infinity,
+                      //                   height: 20 * fem,
+                      //                   child: Row(
+                      //                     crossAxisAlignment:
+                      //                         CrossAxisAlignment.center,
+                      //                     children: [
+                      //                       InkWell(
+                      //                         onTap: () {
+                      //                           Navigator.pop(context);
+                      //                         },
+                      //                         child: SizedBox(
+                      //                           // navbarGfK (2955:14035)
+                      //                           width: 20.08 * fem,
+                      //                           height: 20 * fem,
+                      //                           child: Image.asset(
+                      //                             'assets/new-mobile-2/images/nav-bar-6G1.png',
+                      //                             width: 20.08 * fem,
+                      //                             height: 20 * fem,
+                      //                           ),
+                      //                         ),
+                      //                       ),
+                      //                       Container(
+                      //                         // autogroup4qghzbK (WNzjpcS2DLcCToR4kW4QGh)
+                      //                         padding: EdgeInsets.fromLTRB(
+                      //                             113.93 * fem,
+                      //                             2 * fem,
+                      //                             0 * fem,
+                      //                             2 * fem),
+                      //                         height: double.infinity,
+                      //                         child: Row(
+                      //                           crossAxisAlignment:
+                      //                               CrossAxisAlignment.center,
+                      //                           children: [
+                      //                             Container(
+                      //                               // participantuiH (2955:14040)
+                      //                               margin: EdgeInsets.fromLTRB(
+                      //                                   0 * fem,
+                      //                                   0 * fem,
+                      //                                   113.93 * fem,
+                      //                                   0 * fem),
+                      //                               child: Text(
+                      //                                 'Statements',
+                      //                                 textAlign:
+                      //                                     TextAlign.center,
+                      //                                 style: SafeGoogleFont(
+                      //                                   'Inter',
+                      //                                   fontSize: 18 * ffem,
+                      //                                   fontWeight:
+                      //                                       FontWeight.w400,
+                      //                                   height: 0.8888888889 *
+                      //                                       ffem /
+                      //                                       fem,
+                      //                                   letterSpacing:
+                      //                                       0.09 * fem,
+                      //                                   color: const Color(
+                      //                                       0xffffffff),
+                      //                                 ),
+                      //                               ),
+                      //                             ),
+                      //                             _admin?.user?.first_name ==
+                      //                                     _username
+                      //                                 ? DropDown(
+                      //                                     accessToken: widget
+                      //                                         .accessToken!,
+                      //                                     channelData: widget
+                      //                                         .channelData!,
+                      //                                   )
+                      //                                 : DropDownLeave(
+                      //                                     accessToken: widget
+                      //                                         .accessToken!,
+                      //                                     channelData: widget
+                      //                                         .channelData!,
+                      //                                   )
+                      //                           ],
+                      //                         ),
+                      //                       ),
+                      //                     ],
+                      //                   ),
+                      //                 ),
+                      //               ],
+                      //             ),
+                      //           ),
+                      //         ),
+                      //       ],
+                      //     ),
+                      //   ),
+                      // ),
                       Positioned(
                         // rectangle5e3b (2955:14046)
                         left: 0 * fem,
@@ -453,12 +485,12 @@ class _ParticipantsState extends State<Statements> {
                                       BorderRadius.circular(31.5 * fem),
                                   image: DecorationImage(
                                     fit: BoxFit.cover,
-                                    image: widget.channelData.imageUrl != null
+                                    image: widget.channelData!.imageUrl != null
                                         ? NetworkImage(
-                                            widget.channelData.imageUrl!)
-                                        : widget.channelData.imageFile != null
+                                            widget.channelData!.imageUrl!)
+                                        : widget.channelData!.imageFile != null
                                             ? FileImage(
-                                                widget.channelData.imageFile!)
+                                                widget.channelData!.imageFile!)
                                             : const AssetImage(
                                                     'assets/user-516-a/images/illustration.png')
                                                 as ImageProvider,
@@ -477,7 +509,7 @@ class _ParticipantsState extends State<Statements> {
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     Text(
-                                      '${widget.channelData.title}',
+                                      '${widget.channelData!.title}',
                                       style: SafeGoogleFont(
                                         'Inter',
                                         fontSize: 17 * ffem,
@@ -584,6 +616,7 @@ class _ParticipantsState extends State<Statements> {
                                             ),
                                           ),
                                         )
+
                                       : StatementsList(
                                           channelStatements: channelStatements,
                                         )
@@ -600,7 +633,7 @@ class _ParticipantsState extends State<Statements> {
         ),
       ),
       bottomNavigationBar: BottomNavBar(
-        channelReadData: widget.channelData,
+        channelReadData: widget.channelData!,
       ),
     );
   }
