@@ -301,7 +301,7 @@ class _PreviewChannelState extends State<PreviewChannel> {
                         top: 340 * fem,
                         child: SizedBox(
                           width: 414 * fem,
-                          height: 474 * fem,
+                          //height: 474 * fem,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [

@@ -168,7 +168,7 @@ class _BottomNavBarState extends State<BottomNavBarDash> {
           InkWell(
             onTap: () async {
               try {
-                Navigator.pushReplacement(
+                Navigator.push(
                   context,
                   MaterialPageRoute(
                     builder: (context) => Statements(
