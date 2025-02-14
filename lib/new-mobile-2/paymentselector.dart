@@ -306,7 +306,7 @@ class _PaymentSelectorState extends State<PaymentSelector> {
                                                 ),
                                               ),
                                               TextSpan(
-                                                text: 'KSE',
+                                                text: 'KES',
                                                 style: SafeGoogleFont(
                                                   'Inter',
                                                   fontSize: 14 * ffem,
